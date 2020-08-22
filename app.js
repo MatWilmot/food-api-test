@@ -1,6 +1,8 @@
 $(document).ready(function () {
   const appID = "ab590b46";
   const appKey = "dabc414751363fff3aa8909d8747b8ba";
+
+  // takes a string and returns the food_id
   const searchFood = (item) => {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -14,6 +16,7 @@ $(document).ready(function () {
     });
   };
 
+  // Takes the food_id returned from 'searchFood()' and uses it to get detailed nutritional info
   const searchNutrients = (id) => {
     return new Promise((resolve, reject) => {
       $.ajax({
